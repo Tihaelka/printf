@@ -8,7 +8,7 @@
  */
 int printf_srev(va_list args)
 {
-	char *s = va_args(args, char*);
+	char *s = va_arg(args, char*);
 	int i;
 	int j = 0;
 

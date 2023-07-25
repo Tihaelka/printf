@@ -14,7 +14,7 @@ int printf_hex_aux(unsigned long int num)
 	while (num / 16 != 0)
 	{
 		num /= 16;
-		conter++;
+		counter++;
 	}
 	counter++;
 	array = malloc(counter * sizeof(long int));

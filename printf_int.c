@@ -6,7 +6,7 @@
  */
 int printf_int(va_list args)
 {
-	int n = va_args(args, int);
+	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int i = 1;
 
@@ -23,7 +23,7 @@ int printf_int(va_list args)
 	}
 	if(num > 0)
 	{
-		while (num / 10 != 0=)
+		while (num / 10 != 0)
 		{
 			exp = exp *10;
 			num = num /10;
@@ -34,6 +34,7 @@ int printf_int(va_list args)
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
+			exp = exp /10;
 			i++;
 		}
 	}
@@ -50,8 +51,8 @@ int printf_int(va_list args)
 
 int printf_dec(va_list args)
 {
-	int n = va_args(args, int);
-	int num, last = % 10, digit;
+	int n = va_arg(args, int);
+	int num, last = n % 10, digit;
 	int i = 1;
 	int exp = 1;
 
@@ -77,6 +78,7 @@ int printf_dec(va_list args)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
+			num = num - (digit + '0');
 			exp = exp / 10;
 			i++;
 		}

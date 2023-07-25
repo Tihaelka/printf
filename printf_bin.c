@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * printf_bin - prints a binary number
- * @val: arguments
- * Return: 1
+ * printf_bin - prints a binary number.
+ * @val: arguments.
+ * Return: 1.
  */
 int printf_bin(va_list val)
 {
@@ -25,10 +25,10 @@ int printf_bin(va_list val)
 			cont++;
 		}
 	}
-	if (count == 0)
+	if (cont == 0)
 	{
-		count++;
+		cont++;
 		_putchar('0');
 	}
-	return (count);
+	return (cont);
 }
